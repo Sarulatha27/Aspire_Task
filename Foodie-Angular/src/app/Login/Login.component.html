@@ -1,0 +1,44 @@
+<body>
+    <div class="form-box">
+        <div class="form-value">
+            <form autocomplete="0ff" [formGroup]="LoginForm" (ngSubmit)="validateCredentials()">
+                <h3>Welcome<span>!</span></h3>
+                <h2>Login Here</h2>
+                <div class="inputbox">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" placeholder="Email Id" formControlName="email" />
+                </div>
+
+                <div *ngIf="LoginForm.controls['email'].dirty || LoginForm.controls['email'].touched">
+                    <small *ngIf="LoginForm.controls['email'].errors?.['required']">
+                        Enter your email id</small>
+                    <small *ngIf="LoginForm.controls['email'].errors?.['pattern']">Enter a valid email id</small>
+                </div>
+
+                <div class="inputbox">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" formControlName="password" />
+                </div>
+
+                <div *ngIf="LoginForm.controls['password'].dirty || LoginForm.controls['password'].touched">
+                    <small *ngIf="LoginForm.controls['password'].errors?.['required']">Enter your password</small>
+                    <small *ngIf="LoginForm.controls['password'].errors?.['pattern']">Passwords must be 6-8 characters long & contain 1(uppercase,lowercase,number)</small>
+                </div>
+
+                <div class="forgot">
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button>Log In</button>
+                <div class="register">
+                    <p>Create an account <a routerLink="../register">Register</a></p>
+                </div>
+                <div class="homepage">
+                    <p>
+                        Back to home
+                        <a routerLink="../home"><i class="fas fa-house"></i></a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>

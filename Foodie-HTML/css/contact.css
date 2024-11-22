@@ -1,0 +1,39 @@
+/* Contact Section */
+.contact-section .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.contact-section .row .map {
+    flex: 1 1 400px;
+}
+
+.contact-section .row form {
+    flex: 1 1 400px;
+    padding: 15px;
+    text-align: center;
+}
+
+.contact-section .row form h3 {
+    font-size: 25px;
+    color: var(--black);
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.contact-section .row form .box {
+    margin: 6px 0;
+    font-size: 16px;
+    color: var(--black);
+    border: 1px solid var(--orange);
+    border-radius: 6px;
+    padding: 10px;
+    width: 90%;
+}
+
+.contact-section .row form textarea {
+    height: 150px;
+    resize: none;
+}

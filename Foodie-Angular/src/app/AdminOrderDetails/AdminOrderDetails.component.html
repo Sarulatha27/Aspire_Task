@@ -1,0 +1,81 @@
+<div class="title">
+    <h3>Customer Order Details</h3>
+</div>
+<div class="container">
+    <div *ngIf="status" class="emptyorder">
+            <img src="assets/Images/Cart.png" alt />
+            <h2>There is no orders.</h2>
+    </div>
+    <div class="flex-container">
+        <div *ngFor="let ord of Orders" class="flex-box">
+            <div class="content">
+                <small>Order Id:</small>
+                <span>{{ord.id}}</span>
+            </div>
+            <div class="content">
+                <small>Ordered Date & Time:</small>
+                <span>{{ord.Order_Date|date:'dd MMM yyyy hh:mm'}}</span>
+            </div>
+            <div class="content">
+                <small>Email Id:</small>
+                <span>{{ord.Email_Id}}</span>
+            </div>
+            <div class="content">
+                <small>Mobile No:</small>
+                <span>{{ord.Mobile_No}}</span>
+            </div>
+            <div class="content">
+                <small>Total Amount:</small>
+                <span>{{ord.Total_Amount|currency: 'INR'}}</span>
+            </div>
+            <div class="content">
+                <small>Mode of Order:</small>
+                <span>{{ord.Mode_of_Order}}</span>
+            </div>
+            <div class="content">
+                <small>Mode of Payment:</small>
+                <span>{{ord.Mode_of_Payment}}</span>
+            </div>
+            <div class="content">
+                <small>Pick Up Time:</small>
+                <span>{{ord.Pickup_Time}}</span>
+            </div>
+            <div class="content">
+                <small>Menu Details:</small>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Qty</th>
+                    </tr>
+                    <tr *ngFor="let menu of ord.Menu_Details">
+                        <td>{{menu.menuname}}</td>
+                        <td class="qty">{{menu.menuquantity}}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="content">
+                <small>Order_Status:</small>
+                <span>{{ord.Order_Status}}</span>
+            </div>
+            <div class="content" *ngIf="ord.Order_Status === 'Accepted'">
+                <small>Menu_Prep_Status:</small>
+                <span>{{ord.Menu_Prep_Status}}</span>
+            </div>
+            <div class="content" *ngIf="ord.Order_Status==='Waiting for confirmation'">
+                <small>Action:</small>
+                <button class="edit accept" (click)="Order_Status(ord.id,'Accept')" *ngIf="ord.Order_Status !== 'Accepted' && ord.Order_Status !== 'Rejected'">Accept</button>
+                <button class="edit" (click)="Order_Status(ord.id,'Reject')" *ngIf="ord.Order_Status !== 'Accepted' && ord.Order_Status !== 'Rejected'">Reject</button>
+            </div>
+            <div class="content" *ngIf="ord.Order_Status === 'Accepted' && ord.Menu_Prep_Status !== 'Prepared'">
+                <small>Menu Preparation Status:</small>
+                <button class="edit accept" (click)="Menu_Prep_Status(ord.id)">Prepared</button>
+            </div>
+            <div class="content" *ngIf="ord.Order_Status === 'Accepted' && ord.Menu_Prep_Status === 'Prepared'">
+                <small>Order_Status:</small>
+                <button class="edit" (click)="Order_Status(ord.id,'Deliver')">Delivered</button>
+            </div>
+            <div class="content" *ngIf="ord.Menu_Prep_Status === 'Prepared' && ord.Order_Status !== 'Delivered'">
+                <button class="accept">Generate Bill</button>
+            </div>
+        </div>
+    </div>

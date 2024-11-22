@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact</title>
+        <!-- Icons Link -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+        <!-- CSS File Link -->
+        <link rel="stylesheet" href="./css/common.css">
+        <link rel="stylesheet" href="./css/contact.css">
+    </head>
+    <body id="contact">
+        <!-- Header section starts -->
+        <header class="header">
+            <nav>
+                <img src="./Images/logo.png" class="logo">
+                <ul>
+                    <li><a class="hover" href="index.html">Home</a></li>
+                    <li><a class="hover" href="about.html">About</a></li>
+                    <li><a class="hover" href="menu.html">Menu</a></li>
+                    <li><a class="hover" href="#">Contact</a></li>
+                    <li><a class="login" href="./Forms/login.html">Login</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Header section ends -->
+
+        <!-- contact section starts -->
+        <section class="contact-section">
+            <div class="section-heading">
+                <h1>Contact Us</h1>
+            </div>
+
+            <div class="row">
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114657.7273864978!2d78.05184096848052!3d11.671129859788351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf1ccf52cba0b%3A0xee9989007068ca47!2sSalem%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1674105433063!5m2!1sen!2sin"
+                        width="600" height="400" style="border:0;"
+                        allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <form action="" method="post">
+                    <h3>tell us something!</h3>
+                    <input type="text" name="name" maxlength="50" class="box"
+                        placeholder="enter your name" required>
+                    <input type="number" name="phonenumber" min="10"
+                        maxlength="9999999999" class="box"
+                        placeholder="enter your phone number" required>
+                    <input type="email" name="email" class="box"
+                        placeholder="enter your email" required>
+                    <textarea name="message" class="box" maxlength="500"
+                        
+                        placeholder="enter your message" required></textarea>
+                    <input type="submit" value="send message" class="btn">
+                </form>
+            </div>
+        </section>
+        <!-- contact section ends -->
+
+
+        <!-- Footer section starts -->
+        <footer>
+            <div class="footer-top flex-row">
+                <div class="flex-col">
+                    <img class="logo-name" src="./Images/logo.png" alt="">
+                    <p class="desc">
+                        We Made Fresh And Healthy Soups, Momos, French Fries,
+                        Burgers, Pizzas, Sandwiches,
+                        Ice Creams With Our Own Different Secret Ingredients
+                    </p>
+                    <ul class="social-links">
+                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fab fa-square-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="flex-col">
+                    <h4 class="heading">ADDRESS</h4>
+
+                    <p class="desc">National Highways <br> Salem, Ammapet</p>
+                    <br>
+                    <p class="desc">p: 6789567895 <br> E: foodie@gmail.com</p>
+                </div>
+
+                <div class="flex-col">
+                    <h4 class="heading">Opening Hours</h4>
+                    <ul class="timings flex-col">
+                        <li>
+                            <p class="days">Monday - Saturday</p>
+                            <div class="time">4.00pm - 10.00pm</div>
+                        </li>
+
+                        <li>
+                            <p class="days">Sunday</p>
+                            <div class="time">Closed</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex-col">
+                    <h4 class="heading">More Info</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="#contact">Contact</a>
+                    <a href="./Forms/login.html">Login</a>
+                </div>
+            </div>
+            <div class="copyrights flex-row">
+                <span>Copyright © 2022 All rights reserved | Developed by
+                    Sarulatha D</span>
+            </div>
+        </footer> <!-- Footer section ends -->
+    </body>
+</html>

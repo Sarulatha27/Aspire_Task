@@ -1,0 +1,25 @@
+<app-Header *ngIf="
+    router.url == '/' ||
+    router.url == '/home' ||
+    router.url === '/about' ||
+    router.url == '/menu' ||
+    router.url == '/menu/:check' ||
+    router.url == '/cart' ||
+    router.url == '/contact' ||
+    router.url == '/cart' ||
+    router.url == '/checkout' ||
+    router.url == '/orders' 
+  "></app-Header>
+<router-outlet></router-outlet>
+<app-Footer *ngIf="
+router.url == '/' ||
+router.url == '/home' ||
+router.url === '/about' ||
+router.url == '/menu' ||
+router.url == '/menu/:check' ||
+router.url == '/cart' ||
+router.url == '/contact' ||
+router.url == '/cart' ||
+router.url == '/checkout' ||
+router.url == '/orders'  
+  "></app-Footer>

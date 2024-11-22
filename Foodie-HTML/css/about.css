@@ -1,0 +1,200 @@
+.header nav ul li ul {
+    position: absolute;
+    top: 53px;
+    right: 370px;
+    width: 140px;
+    text-align: center;
+    display: none;
+    background-color: var(--black);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, .1);
+}
+
+.header nav ul li:focus-within>ul,
+.header nav ul li:hover>ul {
+    display: initial;
+}
+
+nav ul li .sub {
+    color: var(--yellow);
+    position: relative;
+}
+
+.about-section .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.about-section .row .image {
+    flex: 1 1 400px;
+}
+
+.about-section .row .image img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.about-section .row .content {
+    flex: 1 10 400px;
+    text-transform: capitalize;
+}
+
+.about-section .row .content h3 {
+    font-size: 30px;
+    color: var(--black);
+}
+
+.about-section .row .content p {
+    padding: 5px 0;
+    line-height: 2;
+    font-size: 15px;
+    color: var(--light-color);
+    text-align: justify;
+}
+
+.about-section .content .services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.about-section .content .services .icons {
+    flex: 1 1 200px;
+    border-radius: 5px;
+    background: var(--white);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, .1);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.about-section .content .services .icons img {
+    width: 20%;
+}
+
+.about-section .content .services .icons h3 {
+    font-size: 17px;
+    color: var(--black);
+}
+
+/* Facilities Section */
+.facility-section .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    background-color: var(--yellow);
+    padding: 10px;
+}
+
+.facility-section .container .content-box img {
+    width: 250px;
+    height: 250px;
+    padding: 10px;
+}
+
+.facility-section .container .content-box img:hover {
+    transform: scale(1.03);
+}
+
+.facility-section .container .content-box .content {
+    color: var(--black);
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.facility-section .container .content-box .content h3 {
+    font-size: 18px;
+}
+
+/* Chef section */
+.chef-section .team-details {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.chef-section .team-details .team-card {
+    background-color: var(--orange);
+    height: 400px;
+}
+
+.team-card .img-wrapper img {
+    transform: scale(1);
+    transition: all .10s ease-in-out;
+}
+
+.team-card .img-wrapper:hover img {
+    transform: scale(.8);
+}
+
+.team-card .text-wrapper {
+    background-color: var(--white);
+    text-align: center;
+    width: 100%;
+}
+
+.team-card .text-wrapper .name {
+    color: var(--yellow);
+    font-size: 20px;
+}
+
+.team-card .text-wrapper .desc {
+    font-size: 18px;
+    color: var(--black);
+}
+
+
+/* Review section */
+.review-section {
+    background-color: whitesmoke;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+}
+
+.review-item {
+    padding: 40px;
+    background-color: var(--white);
+    margin: 15px 5px;
+}
+
+.review-item .container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.review-item .container .img-box {
+    margin-right: 20px;
+    width: 100px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.review-item .container .img-box img {
+    width: 100px;
+}
+
+.review-item .container .text-holder .name {
+    color: var(--orange);
+    font-size: 20px;
+}
+
+.review-item .comment {
+    font-weight: 400;
+}
+
+.review-item .rating {
+    margin-top: 10px;
+}
+
+.review-item .rating .fas {
+    color: rgb(255, 157, 46);
+    font-size: 20px;
+    transform: translateY(5px);
+    margin: 0;
+}

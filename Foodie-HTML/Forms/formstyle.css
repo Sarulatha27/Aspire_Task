@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #edc42e;
+    padding:40px;
+}
+
+.container{
+    min-height: calc(100vh - 40px *2);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 100px;
+    background-color: white;
+}
+h1{
+    font-size: 29px;
+    font-family: 'Dancing Script', cursive;
+    color:#e97130;
+    letter-spacing: 2px;
+}
+h1 span{
+    color: black;
+}
+.or{
+    opacity: .7;
+}
+.tit{
+    font-size: 25px;
+    font-weight:bolder;
+    text-decoration: underline;
+    text-decoration-color: #e97130;
+    text-decoration-thickness: 3px;
+}
+.form-container{
+    width: 450px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+}
+input[type="text"],
+input[type="tel"],
+input[type="password"]{
+    border: none;
+    border-bottom: 1px solid black;
+    height: 40px;
+    outline: none;
+    width: 100%;
+    font-size: 18px;
+}
+.form-inputs small{
+    color: red;
+    font-size: 14px;
+    visibility: hidden;
+}
+.form-inputs.error small{
+    visibility: visible;
+}
+.eye-span{
+    position: absolute;
+    left: 40%;
+    transform: translate(0,-50%);
+    top: 50.5%;
+    cursor: pointer;
+}
+.fas{
+    font-size: 20px;
+    opacity: .7;
+}
+.register-pass{
+    top: 58%;
+}
+.register-confirm{
+    top: 68%;
+}
+button{
+    border: none;
+    margin: 15px 0;
+    background-color: black;
+    color: white;
+    border-radius: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    height: 35px;
+    cursor: pointer;
+    font-weight: 700;
+}
+button:hover{
+    background-color: #edc42e;
+    color: black;
+}
+a{
+    color: #e97130;
+    font-size: 17px;
+}
+a:hover{
+    color: #edc42e;
+}
+.image{
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+}
+img{
+    width: 100%;
+}

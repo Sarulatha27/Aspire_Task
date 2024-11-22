@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Register</title>
+        <!-- Icons Link -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <!-- CSS Link -->
+        <link rel="stylesheet" href="formstyle.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="form">
+                <div class="title">
+                    <h1>Welcome<span>!</span></h1>
+                    <p><span class="tit">Register</span> <span class="or">or</span>
+                        <a href="login.html">login to your account</a></p>
+                </div>
+                <form autocomplete="0ff" class="form-container" id="form"
+                    onsubmit="return validateCredentials()">
+                    <div class="content">
+                        <div class="form-inputs">
+                            <input type="text" name="" id="name"
+                                placeholder="Enter your name">
+                            <small>Error Message</small>
+                        </div>
+                        <div class="form-inputs">
+                            <input type="text" name="" id="email"
+                                placeholder="Enter your email">
+                            <small>Error Message</small>
+                        </div>
+                        <div class="form-inputs">
+                            <input type="tel" name="" id="phone"
+                                placeholder="Enter your phone number">
+                            <small>Error Message</small>
+                        </div>
+                        <div class="form-inputs">
+                            <input type="password" name="" id="password"
+                                placeholder="Enter password"><span
+                                class="eye-span register-pass"><i class="fas
+                                    fa-eye" id="eye" onclick="togglePassword()"></i></span>
+                            <small>Error Message</small>
+                        </div>
+                        <div class="form-inputs">
+                            <input type="password" name="" id="confirm-password"
+                                placeholder="Reenter password"><span
+                                class="eye-span register-confirm"><i class="fas
+                                    fa-eye" id="confirm-eye"
+                                    onclick="toggleConfirmPassword()"></i></span>
+                            <small>Error Message</small>
+                        </div>
+                        <button type="submit" id="register-btn">Register</button>
+                        <p><i class="fas fa-arrow-left"></i><a
+                                href="../index.html"> Back to home</a></p>
+                    </div>
+                </form>
+            </div>
+            <div class="image">
+                <img src="register.jpeg" alt="">
+            </div>
+        </div>
+        <script src="register.js"></script>
+        <script src="toggle.js"></script>
+    </body>
+</html>

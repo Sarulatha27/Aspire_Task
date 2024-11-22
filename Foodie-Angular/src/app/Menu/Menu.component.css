@@ -1,0 +1,119 @@
+.menu-section {
+  padding: 0;
+  margin: 0;
+  margin-top: 80px;
+  padding: 0 1%;
+}
+
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category{
+  margin: 15px 0;
+}
+
+.category button{
+  background-color: var(--yellow);
+  border: none;
+  border-radius: 4px;
+  margin: 0 5px;
+  padding: 7px;
+  font-size: 15px;
+}
+
+.category button:hover{
+  background-color: var(--black);
+  color:var(--white);
+}
+
+input{
+    padding: 7px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--orange);
+}
+
+ul{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+li {
+  height: 280px;
+  width: 300px;
+  border: 1px solid whitesmoke;
+  border-radius: 16px;
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+li:hover {
+  opacity: 0.9;
+}
+
+li img {
+  height: 190px;
+  object-fit: fill;
+}
+
+.content {
+  padding: 20px 3px;
+  display: flex;
+  justify-content: space-between;
+}
+
+a{
+  font-size: 16px;
+  width: 210px;
+  height: 100px;
+  color: var(--orange);
+  text-decoration: underline;
+}
+
+a:hover{
+  cursor: pointer;
+}
+
+.discount{
+  text-decoration: line-through;
+  text-decoration-color: var(--orange);
+}
+
+.add{
+  padding: 10px;
+  font-size: 16px;
+  background-color: var(--yellow);
+  color: var(--black);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  bottom: 180px;
+  left:0px;
+  display: none;
+}
+
+.add:hover,.wish:hover{
+  background-color: var(--orange);
+}
+
+.wish{
+  position: relative;
+  bottom: 220px;
+  left:250px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 16px;
+  display: none;
+}
+
+li:hover button{
+  display: block;
+  transition: all .3s;
+}

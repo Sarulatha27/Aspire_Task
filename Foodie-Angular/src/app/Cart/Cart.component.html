@@ -1,0 +1,185 @@
+<section class="cart-section">
+  <div class="section-heading" *ngIf="!status">
+    <h1>My Cart</h1>
+  </div>
+
+  <div *ngIf="status" class="emptycart">
+    <div>
+      <a><img src="assets/Images/Cart.png" alt /></a>
+      <h2>Your Shopping Cart Is Empty</h2>
+      <a>
+        <p>Add menus to it now.</p>
+      </a>
+      <a>
+        <p>
+          If there is no items in cart,this page will automatically redirected
+        </p>
+      </a>
+    </div>
+  </div>
+
+  <div class="container" *ngIf="!status">
+    <div class="cart-details">
+      <table>
+        <thead>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+          <th>Remove</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cart of CartData">
+            <td><img src="{{ cart.menuimage }}" alt /></td>
+            <td>{{ cart.menuname }}</td>
+            <td>{{ cart.menuprice | currency : "INR" }}</td>
+            <td>
+              <button (click)="handleQuantity(cart.id, 'minus')">-</button>
+              {{ cart.menuquantity }}
+              <button (click)="handleQuantity(cart.id, 'plus')">+</button>
+            </td>
+            <td>{{ cart.menuprice * cart.menuquantity | currency : "INR" }}</td>
+            <td>
+              <button (click)="removeFromCart(cart.id)">
+                <i class="fa fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="summary">
+      <h1>Cart Summary</h1>
+      <form autocomplete="off" [formGroup]="OrderForm" (submit)="placeOrder()">
+        <tr>
+          <td>Sub Total :</td>
+          <td>{{ orderSummary.price | currency : "INR" }}</td>
+        </tr>
+        <tr>
+          <td>GST :</td>
+          <td><pre>  {{ orderSummary.gst | currency : "INR" }}</pre></td>
+        </tr>
+        <tr class="total">
+          <td>Grand Total :</td>
+          <td>{{ orderSummary.total | currency : "INR" }}</td>
+        </tr>
+        <tr>
+          <td>Mode of Order</td>
+          <td>
+            <select name="Mode_of_Order" formControlName="modeofOrder">
+              <option value="Dine-In">Dine-In</option>
+              <option value="Take Out">Take Out</option>
+              <option value="Home Delivery">Home Delivery</option>
+            </select>
+          </td>
+        </tr>
+        <tr class="errorMessage" *ngIf="
+            OrderForm.controls['modeofOrder'].invalid &&
+            (OrderForm.controls['modeofOrder'].touched ||
+              OrderForm.controls['modeofOrder'].dirty)
+          ">
+          <p *ngIf="OrderForm.controls['modeofOrder'].errors?.['required']">
+            This is a required field
+          </p>
+        </tr>
+        
+        <tr>
+          <td>Select Delivery Time</td>
+          <td>
+            <input type="time" formControlName="selectedTime">
+          </td>
+        </tr>
+        <tr class="errorMessage" *ngIf="
+            OrderForm.controls['selectedTime'].invalid &&
+            (OrderForm.controls['selectedTime'].touched ||
+              OrderForm.controls['selectedTime'].dirty)
+          ">
+          <p *ngIf="OrderForm.controls['selectedTime'].errors?.['required']">
+            This is a required field
+          </p>
+        </tr> 
+        <tr> 
+          <td><label for="cardType"> Card Type </label></td>
+          <td>
+            <select name="cardType" formControlName="cardType">
+              <option>Debit Card</option>
+              <option>Credit Card</option>
+            </select>
+          </td>
+        </tr>
+        <tr *ngIf="
+            OrderForm.controls['cardType'].invalid &&
+            (OrderForm.controls['cardType'].touched ||
+              OrderForm.controls['cardType'].dirty)
+          ">
+          <p *ngIf="OrderForm.controls['cardType'].errors?.['required']">
+            This is a required field
+          </p>
+        </tr>
+        <tr>
+          <td><label for="cardNumber"> Card Number </label></td>
+          <td>
+            <input type="tel" maxlength="16" name="cardNumber" formControlName="cardNumber" minlength="16"
+              maxlength="16" placeholder="XXXX XXXX XXXX XXXX" required />
+          </td>
+        </tr>
+        <tr class="errorMessage" *ngIf="
+            OrderForm.controls['cardNumber'].invalid &&
+            (OrderForm.controls['cardNumber'].touched ||
+              OrderForm.controls['cardNumber'].dirty)
+          ">
+          <p *ngIf="OrderForm.controls['cardNumber'].errors?.['required']">
+            This is a required field
+          </p>
+          <p *ngIf="OrderForm.controls['cardNumber'].errors?.['pattern']">
+            Enter Only Digits
+          </p>
+          <p *ngIf="OrderForm.controls['cardNumber'].errors?.['minlength']">
+            Please Enter 16 Digits Number
+          </p>
+        </tr>
+        <tr>
+          <td><label for="expiry"> Expiry Date </label></td>
+          <td>
+            <input type="month" name="expiry" [min]="getCurrentDate()" formControlName="expiry" placeholder="MM/YYYY"
+              required />
+          </td>
+        </tr>
+        <tr class="errorMessage" *ngIf="
+            OrderForm.controls['expiry'].invalid &&
+            (OrderForm.controls['expiry'].touched ||
+              OrderForm.controls['expiry'].dirty)
+          ">
+          <p *ngIf="OrderForm.controls['expiry'].errors?.['required']">
+            This is a required field
+          </p>
+        </tr>
+        <tr>
+          <td><label for="cvv"> CVV </label></td>
+          <td>
+            <input type="tel" name="cvv" formControlName="cvv" placeholder="XXX" minlength="3" maxlength="3" required />
+          </td>
+        </tr>
+        <tr class="errorMessage" *ngIf="
+            OrderForm.controls['cvv'].invalid &&
+            (OrderForm.controls['cvv'].touched ||
+              OrderForm.controls['cvv'].dirty)
+          ">
+          <p *ngIf="OrderForm.controls['cvv'].errors?.['required']">
+            This is a required field
+          </p>
+          <p *ngIf="OrderForm.controls['cvv'].errors?.['pattern']">
+            Enter Only Digits
+          </p>
+          <p *ngIf="OrderForm.controls['cvv'].errors?.['minlength']">
+            Please Enter 3 Digits Number
+          </p>
+        </tr>
+        <div class="button">
+          <button [disabled]="OrderForm.invalid">Place Order</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

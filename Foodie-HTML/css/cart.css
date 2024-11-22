@@ -1,0 +1,20 @@
+table{
+    width: 100%;
+    padding-top: 20px;
+    border: 1px solid var(--orange);
+}
+table,tr,td,th{
+    border: 1px solid var(--orange);
+}
+table thead th td{
+    align-items: center;
+}
+table img {
+    width: 200px;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
