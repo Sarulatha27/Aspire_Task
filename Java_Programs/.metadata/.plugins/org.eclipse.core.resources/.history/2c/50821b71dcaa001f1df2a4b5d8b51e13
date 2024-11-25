@@ -1,0 +1,29 @@
+package oops;
+
+public class ClassAndObject {
+
+	public static void main(String[] args) {
+		
+		
+		
+	}
+
+}
+class Example{
+	 int empId;
+	 String empName;
+	 String empDomain;
+	 
+	 Example(int empId,String empName,String empDomain){
+		 this.empId = empId;
+		 this.empName = empName;
+		 this.empDomain = empDomain;
+	 }
+	 
+	 public void display(){
+		 System.out.println("Employee Id" + empId);
+		 System.out.println("Employee Name" + empName);
+		 System.out.println("Employee Domain" + empDomain);
+	 }
+	
+}

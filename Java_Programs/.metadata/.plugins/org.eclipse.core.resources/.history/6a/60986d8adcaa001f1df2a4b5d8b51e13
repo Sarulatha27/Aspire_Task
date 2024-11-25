@@ -1,0 +1,35 @@
+package oops;
+
+public class ClassAndObject {
+
+	public static void main(String[] args) {
+		
+		Example obj = new Example();
+		
+	}
+
+}
+class Example{
+	 int empId;
+	 String empName;
+	 String empDomain;
+	 
+	 // Default Constructor
+	 public Example(){
+		 System.out.println("Employee Details");
+	 }
+	 
+	 // Parameterized constructor
+	 public Example(int empId,String empName,String empDomain){
+		 this.empId = empId;
+		 this.empName = empName;
+		 this.empDomain = empDomain;
+	 }
+	 
+	 public void display(){
+		 System.out.println("Employee Id" + empId);
+		 System.out.println("Employee Name" + empName);
+		 System.out.println("Employee Domain" + empDomain);
+	 }
+	
+}

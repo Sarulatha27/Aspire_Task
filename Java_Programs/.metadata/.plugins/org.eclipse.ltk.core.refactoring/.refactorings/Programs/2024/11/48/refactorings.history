@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;oops.ClassandObject.java&apos; to &apos;ClassAndObject.java&apos;&#x0D;&#x0A;- Original project: &apos;Programs&apos;&#x0D;&#x0A;- Original element: &apos;oops.ClassandObject.java&apos;&#x0D;&#x0A;- Renamed element: &apos;oops.ClassAndObject.java&apos;" description="Rename compilation unit &apos;ClassandObject.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;oops{ClassandObject.java" name="ClassAndObject.java" references="false" stamp="1732504493142" version="1.0"/>
+</session>
