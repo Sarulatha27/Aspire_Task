@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [SearchSuite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="customReport.CustomHTMLReporter"/>
+  </listeners>
+  <test thread-count="5" name="SearchTest(failed)">
+    <groups>
+      <run>
+        <include name="search-sanity"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="maxapplication.SearchTest">
+        <methods>
+          <include name="verifyPopularSearchFunctionality"/>
+          <include name="setUp"/>
+          <include name="closeDriver"/>
+        </methods>
+      </class> <!-- maxapplication.SearchTest -->
+    </classes>
+  </test> <!-- SearchTest(failed) -->
+</suite> <!-- Failed suite [SearchSuite] -->

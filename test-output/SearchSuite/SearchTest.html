@@ -1,0 +1,282 @@
+<html>
+<head>
+<title>TestNG:  SearchTest</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>SearchTest</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>10/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Feb 25 11:59:37 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>83 seconds (83389 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td>search-sanity </td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='maxapplication.SearchTest.verifyPopularSearchFunctionality()'><b>verifyPopularSearchFunctionality</b><br>Test class: maxapplication.SearchTest<br>Test method: Verify the search behaviour by selecting option from popular searches<br/>
+<a href="#Output-1264966132" onClick='toggleBox("Output-1264966132", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1264966132" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1264966132">
+Clicking on the search box...<br/>
+Search box clicked.<br/>
+Clicking on a product from popular search...<br/>
+<a href= "C:\Users\saru.dhavamani\Desktop\Selenium\Application_Max\screenshots\search\verifyPopularSearchFunctionality(1).png" target = "_blank">Screenshot: Choose product from popular searches</a><br/>
+Product clicked from popular search.<br/>
+Verifying popular search result...<br/>
+<a href= "C:\Users\saru.dhavamani\Desktop\Selenium\Application_Max\screenshots\search\verifyPopularSearchFunctionality(2).png" target = "_blank">Screenshot: Search result</a><br/>
+Test Passed: Product matches with the popular search and screenshot captured.<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>maxapplication.SearchTest@77f80c04</td></tr>
+<tr>
+<td title='maxapplication.SearchTest.clearRecentSearch()'><b>clearRecentSearch</b><br>Test class: maxapplication.SearchTest<br>Test method: Verify the recent search history can be erasable<br/>
+<a href="#Output-2106609649" onClick='toggleBox("Output-2106609649", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2106609649" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2106609649">
+Attempting to clear the recent search history.<br/>
+<a href= "C:\Users\saru.dhavamani\Desktop\Selenium\Application_Max\screenshots\search\clearRecentSearch(1).png" target = "_blank">Screenshot: Search for Tops</a><br/>
+<a href= "C:\Users\saru.dhavamani\Desktop\Selenium\Application_Max\screenshots\search\clearRecentSearch(2).png" target = "_blank">Screenshot: Search result</a><br/>
+<a href= "C:\Users\saru.dhavamani\Desktop\Selenium\Application_Max\screenshots\search\clearRecentSearch(3).png" target = "_blank">Screenshot: Clearing the search field values</a><br/>
+<a href= "C:\Users\saru.dhavamani\Desktop\Selenium\Application_Max\screenshots\search\clearRecentSearch(4).png" target = "_blank">Screenshot: Recent Search is cleared</a><br/>
+Test Passed: Recent search history cleared and screenshot captured.<br/>
+</div>
+</td>
+<td></td>
+<td>8</td>
+<td>maxapplication.SearchTest@77f80c04</td></tr>
+<tr>
+<td title='maxapplication.SearchTest.clearSearchFieldAndValidate()'><b>clearSearchFieldAndValidate</b><br>Test class: maxapplication.SearchTest<br>Test method: Verify that the user can enter a search query and clear the search box .<br/>
+<a href="#Output-1850646717" onClick='toggleBox("Output-1850646717", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1850646717" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1850646717">
+Clicking on the search box...<br/>
+Search box clicked.<br/>
+Enter 'shirts for woman' as search query.<br/>
+Entered search query.<br/>
+<a href= "C:\Users\saru.dhavamani\Desktop\Selenium\Application_Max\screenshots\search\clearSearchFieldAndValidate(1).png" target = "_blank">Screenshot: Typing in search field</a><br/>
+Clear the search query.<br/>
+Search query cleared.<br/>
+<a href= "C:\Users\saru.dhavamani\Desktop\Selenium\Application_Max\screenshots\search\clearSearchFieldAndValidate(2).png" target = "_blank">Screenshot: Cleared the search field values</a><br/>
+Verify the search field is cleared.<br/>
+Test Passed: Search field cleared successfully and screenshot captured.<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>maxapplication.SearchTest@77f80c04</td></tr>
+<tr>
+<td title='maxapplication.SearchTest.selectProductFromSuggestionAndValidateResult()'><b>selectProductFromSuggestionAndValidateResult</b><br>Test class: maxapplication.SearchTest<br>Test method: Verify search functionality with product suggestions<br/>
+<a href="#Output-1946636596" onClick='toggleBox("Output-1946636596", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1946636596" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1946636596">
+Clicking on the search box...<br/>
+Search box clicked.<br/>
+Entering product name 'Jeans'...<br/>
+Passed: Product name 'Jeans' entered.<br/>
+Clicking product from suggestion...<br/>
+<a href= "C:\Users\saru.dhavamani\Desktop\Selenium\Application_Max\screenshots\search\selectProductFromSuggestionAndValidateResult(1).png" target = "_blank">Screenshot: Search Jeans and choose form suggestion list</a><br/>
+<a href= "C:\Users\saru.dhavamani\Desktop\Selenium\Application_Max\screenshots\search\selectProductFromSuggestionAndValidateResult(2).png" target = "_blank">Screenshot: Search Result</a><br/>
+Test Passed: Product selected from suggestion and screenshot captured.<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>maxapplication.SearchTest@77f80c04</td></tr>
+<tr>
+<td title='maxapplication.SearchTest.verifyProductSearchFunctionality()'><b>verifyProductSearchFunctionality</b><br>Test class: maxapplication.SearchTest<br>Test method: Verify the search behaviour by entering a valid product name<br/>
+<a href="#Output-1690481990" onClick='toggleBox("Output-1690481990", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1690481990" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1690481990">
+Clicking on the search box...<br/>
+Clicked the search box.<br/>
+Entering product name 'Jeans' into the search box...<br/>
+Product name 'Jeans' entered.<br/>
+Submitting the search box...<br/>
+Submitted the search.<br/>
+Getting the actual search result...<br/>
+<a href= "C:\Users\saru.dhavamani\Desktop\Selenium\Application_Max\screenshots\search\verifyProductSearchFunctionality(1).png" target = "_blank">Screenshot: Seacrh Jeans</a><br/>
+<a href= "C:\Users\saru.dhavamani\Desktop\Selenium\Application_Max\screenshots\search\verifyProductSearchFunctionality(2).png" target = "_blank">Screenshot: Search result for Jeans</a><br/>
+Comparing actual result with expected result...<br/>
+Test Passed: Product search result matches the expected result and screenshot captured.<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>maxapplication.SearchTest@77f80c04</td></tr>
+<tr>
+<td title='maxapplication.SearchTest.verifyPopularSearchVisibility()'><b>verifyPopularSearchVisibility</b><br>Test class: maxapplication.SearchTest<br>Test method: Verify the popular searches is displayed when clicking the search field<br/>
+<a href="#Output-1404834600" onClick='toggleBox("Output-1404834600", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1404834600" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1404834600">
+Clicking on the search box...<br/>
+Search box clicked.<br/>
+Verifying popular searches visibility.<br/>
+<a href= "C:\Users\saru.dhavamani\Desktop\Selenium\Application_Max\screenshots\search\verifyPopularSearchVisibility(1).png" target = "_blank">Screenshot: Visbility of popular searches</a><br/>
+Test Passed: Popular searches are visible and screenshot captured.<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>maxapplication.SearchTest@77f80c04</td></tr>
+<tr>
+<td title='maxapplication.SearchTest.searchInvalidProductAndValidateError()'><b>searchInvalidProductAndValidateError</b><br>Test class: maxapplication.SearchTest<br>Test method: Verify the search with numbers and letters combined<br/>
+<a href="#Output-631717345" onClick='toggleBox("Output-631717345", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-631717345" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-631717345">
+Clicking on the search box...<br/>
+Search box clicked.<br/>
+Entering product name: hjk576<br/>
+Product name entered.<br/>
+<a href= "C:\Users\saru.dhavamani\Desktop\Selenium\Application_Max\screenshots\search\searchInvalidProductAndValidateError(1).png" target = "_blank">Screenshot: Searching with combo of letters and numbers</a><br/>
+Submitting search box...<br/>
+Search submitted.<br/>
+Validating error message for invalid product...<br/>
+<a href= "C:\Users\saru.dhavamani\Desktop\Selenium\Application_Max\screenshots\search\searchInvalidProductAndValidateError(2).png" target = "_blank">Screenshot: Seach result</a><br/>
+Error message displayed as expected and screenshot captured.<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>maxapplication.SearchTest@77f80c04</td></tr>
+<tr>
+<td title='maxapplication.SearchTest.verifySearchFunctionalityWithSpecialCharacter()'><b>verifySearchFunctionalityWithSpecialCharacter</b><br>Test class: maxapplication.SearchTest<br>Test method: Verify the search behaviour by entering a * special character in the search field<br/>
+<a href="#Output-65305091" onClick='toggleBox("Output-65305091", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-65305091" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-65305091">
+Clicking on the search box...<br/>
+Search box clicked.<br/>
+Entering '*' special character into the search field...<br/>
+Entered * special character<br/>
+<a href= "C:\Users\saru.dhavamani\Desktop\Selenium\Application_Max\screenshots\search\verifySearchFunctionalityWithSpecialCharacter(1).png" target = "_blank">Screenshot: Search for *</a><br/>
+Submitting the search box...<br/>
+Search box submitted successfully.<br/>
+Getting actual result from the product search...<br/>
+<a href= "C:\Users\saru.dhavamani\Desktop\Selenium\Application_Max\screenshots\search\verifySearchFunctionalityWithSpecialCharacter(2).png" target = "_blank">Screenshot: Search Result</a><br/>
+Test Passed: All the products are displayed and captured screenshot<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>maxapplication.SearchTest@77f80c04</td></tr>
+<tr>
+<td title='maxapplication.SearchTest.verifySearchAndApplyPriceFilter()'><b>verifySearchAndApplyPriceFilter</b><br>Test class: maxapplication.SearchTest<br>Test method: Verify that search results can be filtered based on price<br/>
+<a href="#Output-75480150" onClick='toggleBox("Output-75480150", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-75480150" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-75480150">
+Clicking on the search box...<br/>
+Search box clicked.<br/>
+Entering product name 'Dress'...<br/>
+Product name 'Dress' entered.<br/>
+<a href= "C:\Users\saru.dhavamani\Desktop\Selenium\Application_Max\screenshots\search\verifySearchAndApplyPriceFilter(1).png" target = "_blank">Screenshot: Search Dress</a><br/>
+Submitting the search...<br/>
+Search submitted successfully.<br/>
+Applying price filter...<br/>
+<a href= "C:\Users\saru.dhavamani\Desktop\Selenium\Application_Max\screenshots\search\verifySearchAndApplyPriceFilter(2).png" target = "_blank">Screenshot: Entering minimum price</a><br/>
+<a href= "C:\Users\saru.dhavamani\Desktop\Selenium\Application_Max\screenshots\search\verifySearchAndApplyPriceFilter(3).png" target = "_blank">Screenshot: Entering maximum price</a><br/>
+Price filter applied successfully.<br/>
+Checking if price filter is applied...<br/>
+<a href= "C:\Users\saru.dhavamani\Desktop\Selenium\Application_Max\screenshots\search\verifySearchAndApplyPriceFilter(4).png" target = "_blank">Screenshot: Price filter is applied</a><br/>
+Test Passed: Price filter is applied as expected and screenshot captured.<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>maxapplication.SearchTest@77f80c04</td></tr>
+<tr>
+<td title='maxapplication.SearchTest.searchNonExistProductAndValidateError()'><b>searchNonExistProductAndValidateError</b><br>Test class: maxapplication.SearchTest<br>Test method: Verify the behavior when there are no products found for the search term<br/>
+<a href="#Output-1260043537" onClick='toggleBox("Output-1260043537", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1260043537" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1260043537">
+Clicking on the search box...<br/>
+Search box clicked.<br/>
+Entering product name 'lipstick'...<br/>
+Product name entered.<br/>
+<a href= "C:\Users\saru.dhavamani\Desktop\Selenium\Application_Max\screenshots\search\searchNonExistProductAndValidateError(1).png" target = "_blank">Screenshot: Searching for Lipstick</a><br/>
+Submitting the search...<br/>
+Search submitted.<br/>
+Validating error message...<br/>
+<a href= "C:\Users\saru.dhavamani\Desktop\Selenium\Application_Max\screenshots\search\searchNonExistProductAndValidateError(2).png" target = "_blank">Screenshot: Search result for lipstick</a><br/>
+Test Passed: Error message validated and screenshot captured.<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>maxapplication.SearchTest@77f80c04</td></tr>
+</table><p>
+</body>
+</html>
